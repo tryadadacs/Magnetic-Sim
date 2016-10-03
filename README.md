@@ -1,1 +1,1 @@
-# Magnetic-Sim
+The main file in this simulation is the determine_magnetic_field.m which calculates the magnetic field components of a satellite in orbit in both the NED and orbital frames. (orbit parameters are user defined)
