@@ -78,6 +78,7 @@ end
 total_time = (0:(time_step / 60):sim_time)';
 figure()
 plot(total_time, B_field_NED)
+axis([0 sim_time -3.5*10^4 3.5*10^4])
 title('Magnetic Field (NED frame)')
 legend('Bx', 'By', 'Bz')
 xlabel('time, minutes')
@@ -86,6 +87,7 @@ ylabel('nano-Tesla')
 % Orbital frame component graph
 figure()
 plot(total_time, B_field_orb)
+axis([0 sim_time -3.5*10^4 3.5*10^4])
 title('Magnetic Field (orbital frame)')
 legend('Bx', 'By', 'Bz')
 xlabel('time, minutes')
