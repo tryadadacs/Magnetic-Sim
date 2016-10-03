@@ -32,9 +32,9 @@ init_wheel_ang_vel = orb_vel/sqrt(2); %initial reaction wheel angular vel.
 period = (2*pi*(semi_major * 1000)) / orb_vel;
 num_orb = (sim_time * 60) / period;
 fprintf('Simulating %2.2f Orbits \n', num_orb)
+time = datenum(datetime);
 time_of_day = mod(time, secs_per_day); % seconds in current day
 gha = (time_of_day)/secs_per_day*360; %greenwich hour angle, degrees
-time = datenum(datetime);
 % Find the latitude and longitude from orbit specs
 [lat, long] = Orbit3D(RA_ascend, arg_per, true_anom, inclin, semi_major,...
     eccent, time_step, num_orb);
@@ -90,7 +90,6 @@ title('Magnetic Field (orbital frame)')
 legend('Bx', 'By', 'Bz')
 xlabel('time, minutes')
 ylabel('nano-Tesla')
-disp(ned_orb_matrix)
 
 runtime = toc; %end runtime counter
 fprintf('Total Simulation Time = %4.2f \n', runtime)
