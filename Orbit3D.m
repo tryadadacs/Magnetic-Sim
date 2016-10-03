@@ -123,10 +123,8 @@ if ((grp==2)||(grp==3))
     %disp(' 1) Physic ');
     %disp(' 2) Physic with meridians and parallels ');
     %disp(' otherwise for Countorns of emerse terre (default)');
-    map  = input('Press 1, then Enter: ','s');
-    if (exist('map','var')==0)
-        map = '0';
-    end
+    map  = 0;
+
 end
 if ((grp==1)||(grp==3))
     str = 0;
